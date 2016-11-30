@@ -14,7 +14,7 @@ $(function(){
 		}
 		flag=false;
 		
-		$(".fullpage").css("marginTop",-num*cliH);
+		$(".fullpage").css({marginTop:-num*cliH,transition:"margin-top 1s ease"});
 	})
 	touch.on("body","swipedown",".fullpage",function(){
 		if(!flag){
@@ -27,7 +27,7 @@ $(function(){
 			return;
 		}
 		flag=false;
-		$(".fullpage").css("marginTop",-num*cliH);
+		$(".fullpage").css({marginTop:-num*cliH,transition:"margin-top 1s ease"})
 	})
 
 	$(".fullpage")[0].addEventListener("webkitTransitionEnd",function(){
